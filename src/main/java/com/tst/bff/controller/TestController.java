@@ -28,4 +28,10 @@ public class TestController {
                 ImmutableMap.of("name", name));
         return res;
     }
+
+    @GetMapping("/test")
+    public String test(@RequestParam("name") String name){
+        log.info("hello name: {}", name);
+        return name;
+    }
 }
